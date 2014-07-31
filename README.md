@@ -1,12 +1,34 @@
-# /etc/apt/sources.list.d/debian.list for Anonymity Linux Distributions #
+# Disabled TCP-Timestamps #
 
-A question of distribution maintenance strategies. The more standard
-way would indeed be populating /etc/apt/sources.list at install or build time
-and leaving /etc/apt/sources.list.d alone. The idea of managing
-/etc/apt/sources.list.d/debian.list for the user is, the anonymity
-distribution maintainers can decide when it is a better "change stable to
-oldstable", "keep wheezy as long as needed to work out [eventual!] issues
-that would break during upgrade to jessie" and such.
+TCP time stamps (rfc 1323) allow for tracking clock
+information with millisecond resolution. This may or may not allow an
+attacker to learn information about the system clock at such
+a resolution, depending on various issues such as network lag.
+This information is available to anyone who monitors the network
+somewhere between the attacked system and the destination server.
+It may allow an attacker to find out how long a given
+system has been running, and to distinguish several
+systems running behind NAT and using the same IP address. It might
+also allow to look for clocks that match an expected value to find the
+public IP used by a user.
+
+Hence, this package disables this feature by shipping the
+/etc/sysctl.d/tcp_timestamps.conf configuration file.
+
+Note that TCP time stamps normally have some usefulness. They are
+needed for:
+
+* the TCP protection against wrapped sequence numbers; however, to
+trigger a wrap, one needs to send roughly 2^32 packets in one
+minute:  as said in rfc 1700, "The current recommended default
+time to live (TTL) for the Internet Protocol (IP) [45,105] is 64".
+So, this probably won't be a practical problem in the context
+of Anonymity Distributions.
+
+* "Round-Trip Time Measurement", which is only useful when the user
+manages to saturate their connection. When using Anonymity Distributions,
+probably the limiting factor for transmission speed is rarely the capacity
+of the user connection.
 
 (This package description has been [automatically](https://github.com/Whonix/whonix-developer-meta-files/blob/master/debug-steps/packaging-helper-script) extracted and mirrored from `debian/control`.)
 
