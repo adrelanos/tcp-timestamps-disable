@@ -1,3 +1,9 @@
+commit 08f7f645c25b0a3ad5855c48198cdfc97a999a5a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 4 00:45:02 2015 +0000
+
+    added changelog.upstream
+
 commit 64aa0f4d467b627fee114b1bcbf2e89c8ddef125
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Feb 4 00:40:54 2015 +0000
