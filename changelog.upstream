@@ -1,0 +1,102 @@
+commit 64aa0f4d467b627fee114b1bcbf2e89c8ddef125
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 4 00:40:54 2015 +0000
+
+    updated makefile generic to version 1.3
+
+commit 950759bfd3c96bd53c1ee76580241f88f5f1e09e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Feb 3 23:58:56 2015 +0000
+
+    Added creation of upstream changelog to debian/rules
+
+commit bec64375d807d6f3da925f12e14eeb4898e53c1c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 7 19:34:56 2015 +0000
+
+    bumped compat from 8 to 9
+
+commit 72ccd9fff87be35ad7ce504bd34dd58272e7f34f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 5 19:01:21 2014 +0000
+
+    updated generic makefile
+
+commit 25406f4816596ef3c1ab6615e4d078ee578ba97f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Oct 28 22:35:30 2014 +0000
+
+    makefile: refactoring, avoid using IFS
+
+commit d9d3333223184e48f4ac2764c6a893a7d81b2ab6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Oct 25 01:58:54 2014 +0000
+
+    makefile:
+    - make debdist; make undebdist
+    - cleanup
+    - refactoring
+
+commit f4c8ab441ab5e9cc5012ffb480119b30dd9a6755
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Oct 23 22:43:05 2014 +0000
+
+    makefile:
+    - new target "make undist", which deletes the upstream tarball
+    - $DISTDIR variable for make (un)dist, which defaults to ".." and can be used to create upstream tarballs in arbitrary locations
+    - refactoring, all function names and global variables now start with "make_" to make the script `source`ing friendly
+    - made `source`able
+
+commit 95a78c151f83738be4380053dc60a2317a65c55f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Oct 13 12:36:58 2014 +0000
+
+    readme
+
+commit 0f58883d8de8224249874e003f6c55720a06b1b0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 19 18:52:44 2014 +0000
+
+    makefile: added new feature "make deb-chl-bumpup" - Bump upstream version number in debian/changelog.
+
+commit bac64fa3dc972224143895b0db796622f805dbb7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 17 20:54:27 2014 +0000
+
+    Updated debian/changelog.
+
+commit 038816ea69f191dd31eb153c45ca5489c88078f4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 17 20:47:30 2014 +0000
+
+    Fixed changelog date.
+
+commit edef5c60675a0c9adfab5310504a78397236690d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 17 18:03:31 2014 +0000
+
+    bump version number
+
+commit 053651ed90c0f6ebf84fd58a84015cd2afe27116
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Aug 14 13:35:20 2014 +0000
+
+    Implemented make deb-icup: Combination of make deb-pkg, make deb-pkg-install and make deb-pkg-cleanup.
+
+commit 28c7597ef7bed94c06a6cb36b2cece88e19cfb2c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 31 20:19:18 2014 +0000
+
+    readme
+
+commit 9e9d8da7c99ebc6f847f87134da5e34cecabc7d0
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 31 20:17:47 2014 +0000
+
+    fix copyright of debian/control
+
+commit a9b4bb472567ba43dcfee2476d157f9571e3561e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Jul 31 20:12:26 2014 +0000
+
+    initial implementation
