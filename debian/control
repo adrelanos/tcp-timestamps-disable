@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 9), faketime, genmkfile
 Homepage: https://github.com/Whonix/tcp-timestamps-disable
 Vcs-Browser: https://github.com/Whonix/tcp-timestamps-disable
 Vcs-Git: https://github.com/Whonix/tcp-timestamps-disable.git
-Standards-Version: 3.9.4
+Standards-Version: 3.9.6
 
 Package: tcp-timestamps-disable
 Architecture: all
